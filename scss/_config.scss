@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Klee+One&family=Rampart+One&display=swap');
+
+//resets
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+// Font Variables
+$headerFont : "Rampart One", cursive;
+$primaryFont : "Klee One", cursive;
+$secondaryFont : "Besley", serif; 
+
+// colors
+$layoutColor: rgb(223, 217, 205);
+$primaryFontColor: rgb(48, 43, 39);
+$headerColor: rgb(206, 71, 96);
+$notificationBorder: rgb(57, 39, 89);
+$notificationColor: rgb(142, 113, 193);
+
+//mixins
+@mixin basicButton ($width) {
+    text-decoration: none;
+    background: rgb(89, 66, 54);
+    color: #ffffff;
+    font-family: $primaryFont;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.2s all;
+    width: $width;
+}
+
+@mixin basicButtonActive {
+    background: rgb(51, 38, 31);
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}

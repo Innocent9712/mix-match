@@ -1,0 +1,116 @@
+@import "./config";
+
+body {
+    margin: 5%;
+    background: $layoutColor;
+    font-family: $primaryFont;
+}
+
+header {
+    margin: 0 auto;
+    h2 {
+        font-family: $headerFont;
+        font-size: 1.8em;
+        color: $headerColor;
+        margin: 0.8em 1em; 
+    };
+
+    h4 {
+        font-family: $primaryFont;
+        color: $primaryFont;
+    }
+}
+
+.warning {
+    font-size: 0.7em;
+    width: 90%;
+    border: 2px solid $notificationBorder;
+    background: $notificationColor;
+    color: $notificationBorder;
+    padding: 0.6em;
+    margin: 2.3em auto;
+
+    h5 {
+        font-size: 1.3em;
+    }
+}
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.itemContainer {
+    width:90%;
+    margin: 1.4em auto;
+
+    label {
+        margin: 0.6em 0;
+        font-size: 0.9em;
+        font-weight: 600;
+    };
+    input {
+        color: $primaryFontColor;
+        font-family: $primaryFont;
+        outline: none;
+        padding: 0.5em;
+        border: 2px solid rgb(130, 98, 81);
+        width: 70%;
+        margin: 0.7em 0.4em 1em 0;
+
+        &:focus {
+            border: 2px solid rgb(89, 66, 54);
+        };
+
+        &::placeholder {
+            color: rgb(159, 183, 185);
+        };
+    };
+
+    button {
+        @include basicButton(26%);
+
+
+        &:active {
+            @include basicButtonActive
+        }
+    }
+}
+
+.itemsDisplay {
+    position: relative;
+    width: 100%;
+    min-height: 15vh;
+    background: rgb(245, 246, 243);
+
+    .count {
+        position: absolute;
+        font-size: 0.9em;
+        left: 70%;
+        top: 60%;
+    }
+}
+
+.generate {
+    @include basicButton(30%);
+    margin: 1.3em auto;
+
+    &:active {
+        @include basicButtonActive;
+    }
+
+}
+.itemsContainer {
+    display: flex;
+    margin: 0.3em;
+    flex-wrap: wrap;
+
+    .itemStyle {
+        padding: 0.3em 0.4em;
+        margin: 0.3em;
+        font-size: 0.8em;
+        border-radius: 0.5em;
+        background: rgb(184, 186, 207);
+        color: rgb(91, 94, 134);
+    }
+}
+

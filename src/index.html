@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <title>Mix-Match</title>
+</head>
+<body>
+    <header>
+        <h2>
+            Mix-Match
+        </h2>
+        <h4>
+            Have fun providing list of people or things you need matched, and we'll randomly match them anyway you want.
+        </h4>
+    </header>
+    <main class="main">
+        <div class="warning">
+            <h5>Important!</h5>
+            <p>The number of items entered must be divisible by the number of pairing required.</p>
+        </div>
+        <div class="itemContainer">
+            <label for="item">Enter Item</label><br>
+            <input type="text" placeholder="Enter text here">
+            <button id="addItem">add</button>
+        </div>
+        <div class="itemsDisplay">
+            <ul class="itemsContainer"></ul>
+            <p class="count"></p>
+        </div>
+        <button class="generate">generate</button>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Klee+One&family=Rampart+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 5%;
+  background: #dfd9cd;
+  font-family: "Klee One", cursive;
+}
+
+header {
+  margin: 0 auto;
+}
+
+header h2 {
+  font-family: "Rampart One", cursive;
+  font-size: 1.8em;
+  color: #ce4760;
+  margin: 0.8em 1em;
+}
+
+header h4 {
+  font-family: "Klee One", cursive;
+  color: "Klee One", cursive;
+}
+
+.warning {
+  font-size: 0.7em;
+  width: 90%;
+  border: 2px solid #392759;
+  background: #8e71c1;
+  color: #392759;
+  padding: 0.6em;
+  margin: 2.3em auto;
+}
+
+.warning h5 {
+  font-size: 1.3em;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.itemContainer {
+  width: 90%;
+  margin: 1.4em auto;
+}
+
+.itemContainer label {
+  margin: 0.6em 0;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.itemContainer input {
+  color: #302b27;
+  font-family: "Klee One", cursive;
+  outline: none;
+  padding: 0.5em;
+  border: 2px solid #826251;
+  width: 70%;
+  margin: 0.7em 0.4em 1em 0;
+}
+
+.itemContainer input:focus {
+  border: 2px solid #594236;
+}
+
+.itemContainer input::-webkit-input-placeholder {
+  color: #9fb7b9;
+}
+
+.itemContainer input:-ms-input-placeholder {
+  color: #9fb7b9;
+}
+
+.itemContainer input::-ms-input-placeholder {
+  color: #9fb7b9;
+}
+
+.itemContainer input::placeholder {
+  color: #9fb7b9;
+}
+
+.itemContainer button {
+  text-decoration: none;
+  background: #594236;
+  color: #ffffff;
+  font-family: "Klee One", cursive;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  width: 26%;
+}
+
+.itemContainer button:active {
+  background: #33261f;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.itemsDisplay {
+  position: relative;
+  width: 100%;
+  min-height: 15vh;
+  background: #f5f6f3;
+}
+
+.itemsDisplay .count {
+  position: absolute;
+  font-size: 0.9em;
+  left: 70%;
+  top: 60%;
+}
+
+.generate {
+  text-decoration: none;
+  background: #594236;
+  color: #ffffff;
+  font-family: "Klee One", cursive;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  width: 30%;
+  margin: 1.3em auto;
+}
+
+.generate:active {
+  background: #33261f;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.itemsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.3em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.itemsContainer .itemStyle {
+  padding: 0.3em 0.4em;
+  margin: 0.3em;
+  font-size: 0.8em;
+  border-radius: 0.5em;
+  background: #b8bacf;
+  color: #5b5e86;
+}
+/*# sourceMappingURL=main.css.map */
