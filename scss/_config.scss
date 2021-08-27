@@ -9,6 +9,7 @@
 }
 
 
+
 // Font Variables
 $headerFont : "Rampart One", cursive;
 $primaryFont : "Klee One", cursive;
@@ -40,4 +41,18 @@ $notificationColor: rgb(142, 113, 193);
     background: rgb(51, 38, 31);
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+label {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+input {
+    color: $primaryFontColor;
+    font-family: $primaryFont;
+    outline: none;
+    padding: 0.5em;
+    border: 2px solid rgb(130, 98, 81);
 }

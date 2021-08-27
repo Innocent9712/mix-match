@@ -1,8 +1,9 @@
 let count = document.querySelector('.count')
 let addItem = document.querySelector('#addItem')
-let itemInput = document.querySelector('input')
+let itemInput = document.querySelector('#inputs')
 let itemsContainer = document.querySelector('.itemsContainer')
 let generatePairs = document.querySelector('.generate')
+let dataContainer = document.querySelector('.result-container')
 let itemsArray = []
 
 
@@ -11,16 +12,17 @@ count.innerHTML = `Count: ${itemsArray.length}`
 let addToArray = (array) => {
     if (itemInput.value != "") {
         let value = itemInput.value
-        console.log(value)
+        // console.log(value)
         array.push(value)
         itemInput.value = ""   
     } //console.log('enter an input!') // modify this later to give a warning.
 }
-testArr = ["swim", "dream", "koala"]
 
 // Randomizing the inputs
 let mixIt = (array, pairs) => {
-    if (array.length % pairs === 0) {
+    let pairInput = document.getElementById('pairs').value
+    pairs = pairInput
+    if (array.length !== 0 && array.length % pairs === 0) {
         let newArr = [...array]
         let mixedArr = []
         let num = Math.floor(Math.random() * newArr.length);
@@ -38,9 +40,11 @@ let mixIt = (array, pairs) => {
             mixedArr.push(pairArr)
             num = Math.floor(Math.random() * newArr.length);
         }
-        console.log(newArr)
+        // console.log(newArr)
         console.log(mixedArr)
         return mixedArr;
+    } else if (pairs <= 0 || pairs != "") {
+        console.log("Check the value of your pair or your list")
     } else {
         console.log("The array is not fully divisible by the pair value")
     }
@@ -49,7 +53,32 @@ let mixIt = (array, pairs) => {
 
 //Getting the output from the randomization and sending to the UI
 let displayPairing = (data) => {
-
+    if (data && data.length !== 0 ) {
+        console.log(data)
+        data.forEach((datum)=> {
+            let pairList = document.createElement('li')
+            pairList.classList.add('pair-list')
+            let itemNumber = document.createElement('p')
+            itemNumber.classList.add('group-name')
+            let itemsGroup = document.createElement('ul')
+            itemsGroup.classList.add('group-items')
+            itemNumber.innerHTML= `Group ${data.indexOf(datum)+1}`
+            pairList.appendChild(itemNumber)
+            datum.forEach(item=> {
+                let itemName = document.createElement('li')
+                itemName.classList.add('item-name')
+                itemName.innerHTML=`${item}, `
+                itemsGroup.appendChild(itemName)
+            })
+            pairList.appendChild(itemsGroup)
+            dataContainer.appendChild(pairList)
+            console.log(dataContainer)
+            console.log(`pair ${data.indexOf(datum)+1} is ${datum}`)
+        })
+    } else {
+        console.log('No data to display!')
+    }
+    
 }
 
 let updateItemsList = (array) => {
@@ -58,7 +87,7 @@ let updateItemsList = (array) => {
         array.forEach(item => {
             p.innerHTML = item
             p.classList.add('itemStyle')
-            itemList.appendChild(p)
+            itemsContainer.appendChild(p)
             count.innerHTML = `Count: ${itemsArray.length}`
         });
         console.log(array)

@@ -7,14 +7,26 @@
           box-sizing: border-box;
 }
 
+label {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+input {
+  color: #302b27;
+  font-family: "Klee One", cursive;
+  outline: none;
+  padding: 0.5em;
+  border: 2px solid #826251;
+}
+
 body {
-  margin: 5%;
   background: #dfd9cd;
   font-family: "Klee One", cursive;
 }
 
 header {
-  margin: 0 auto;
+  margin: 0 2em;
 }
 
 header h2 {
@@ -45,7 +57,7 @@ header h4 {
 
 main {
   width: 80%;
-  margin: auto;
+  margin: 1.6em 10%;
 }
 
 .itemContainer {
@@ -55,16 +67,9 @@ main {
 
 .itemContainer label {
   margin: 0.6em 0;
-  font-size: 0.9em;
-  font-weight: 600;
 }
 
 .itemContainer input {
-  color: #302b27;
-  font-family: "Klee One", cursive;
-  outline: none;
-  padding: 0.5em;
-  border: 2px solid #826251;
   width: 70%;
   margin: 0.7em 0.4em 1em 0;
 }
@@ -111,6 +116,35 @@ main {
           transform: scale(0.98);
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
           box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.pairs {
+  margin: auto;
+  width: 90%;
+}
+
+.pairs input {
+  margin: 1em auto;
+}
+
+.pairs input:focus {
+  border: 2px solid #594236;
+}
+
+.pairs input::-webkit-input-placeholder {
+  color: #9fb7b9;
+}
+
+.pairs input:-ms-input-placeholder {
+  color: #9fb7b9;
+}
+
+.pairs input::-ms-input-placeholder {
+  color: #9fb7b9;
+}
+
+.pairs input::placeholder {
+  color: #9fb7b9;
 }
 
 .itemsDisplay {
@@ -168,5 +202,58 @@ main {
   border-radius: 0.5em;
   background: #b8bacf;
   color: #5b5e86;
+}
+
+.result-container {
+  background-color: #f5f6f3;
+  padding: 0.3em 0.1em;
+  margin: 0.6em 0 1.3em 0;
+}
+
+.result-container .pair-list {
+  background-color: #D4D8CC;
+  width: 90%;
+  margin: 0.7em auto;
+  padding: 0.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #5b5e86;
+}
+
+.result-container .pair-list .group-name {
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.result-container .pair-list .group-items {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.result-container .pair-list .group-items .item-name {
+  font-size: 0.6em;
+}
+
+footer {
+  background-color: #ce4760;
+  margin-top: 0.5em;
+  padding: 2em;
+}
+
+footer h5 {
+  font-size: 1.1em;
+  text-align: center;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
